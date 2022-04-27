@@ -22,6 +22,8 @@
         <itCoverageAgent></itCoverageAgent>
         <build-helper-maven-plugin.version>1.9.1</build-helper-maven-plugin.version>
         <my.project.version>1.0-SNAPSHOT</my.project.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -124,16 +126,16 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.7.9</version>
+                <version>0.8.4</version>
                 <executions>
                     <!-- METHOD 1 -->
-                        <!--<execution>-->
-                            <!--<id>prepare-agent</id>-->
-                            <!--<goals>-->
-                                <!--<goal>prepare-agent</goal>-->
-                            <!--</goals>-->
-                        <!--</execution>-->
-                        <!-- prepare agent for measuring unit tests -->
+                    <!--<execution>-->
+                    <!--<id>prepare-agent</id>-->
+                    <!--<goals>-->
+                    <!--<goal>prepare-agent</goal>-->
+                    <!--</goals>-->
+                    <!--</execution>-->
+                    <!-- prepare agent for measuring unit tests -->
 
                     <!-- METHOD 2 -->
                     <execution>
@@ -142,7 +144,7 @@
                             <goal>prepare-agent</goal>
                         </goals>
                         <!--<configuration>-->
-                            <!--<destFile>${sonar.jacoco.reportPath}</destFile>-->
+                        <!--<destFile>${sonar.jacoco.reportPath}</destFile>-->
                         <!--</configuration>-->
                     </execution>
 
